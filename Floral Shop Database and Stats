@@ -1,0 +1,33 @@
+-- Created Floral Shop Database
+
+CREATE TABLE FloralShop (id INTEGER PRIMARY KEY, name TEXT, cost INTEGER, QuantityonHand INTEGER, Popularyear INTEGER);
+
+INSERT INTO FloralShop VALUES (1, "Carnation", 4.00, 3, 2001);
+INSERT INTO FloralShop VALUES (2, "Lillies", 4.00, 3, 2001);
+INSERT INTO FloralShop VALUES (3, " Roses", 6.00, 12, 2004);    
+INSERT INTO FloralShop VALUES (4, " Iris", 2.00, 6, 1998);
+INSERT INTO FloralShop VALUES (5, " Dahlia", 2.00, 2, 2000);
+INSERT INTO FloralShop VALUES (6, " Hibiscus", 4.00, 12, 2002);
+INSERT INTO FloralShop VALUES (7, " Daisy", 6.00, 10, 2004);
+INSERT INTO FloralShop VALUES (8, " Peony", 5.00, 14, 2002);
+INSERT INTO FloralShop VALUES (9, " Lily of the Valley", 3.00, 6, 2000);
+INSERT INTO FloralShop VALUES (10, " Aloe", 14.00, 5, 2005);
+INSERT INTO FloralShop VALUES (11, "Sunflower", 6.00, 9, 2001);
+INSERT INTO FloralShop VALUES (12, " Ivy", 8.00, 5, 2000);
+INSERT INTO FloralShop VALUES (13, " Hydrangea", 4.00, 4, 1997);
+INSERT INTO FloralShop VALUES (14, " Poppy", 3.00, 5, 1998);
+INSERT INTO FloralShop VALUES (15, "Gardenia", 3.00, 6, 2003);
+INSERT INTO FloralShop VALUES (16, "Watering can", 10.00, 20, 2002);
+INSERT INTO FloralShop VALUES (17, " Plant food", 10.00, 20, 2002);
+
+-- Display Database ordered by popular for the earliest years of shop being open 
+
+SELECT * FROM FloralShop Popularyear ORDER BY PopularYear LIMIT 6;
+
+-- Display Database by cheapest cost.
+
+SELECT * FROM FLoralShop ORDER BY cost desc;
+
+-- How much Total Inventory on Hand?
+
+SELECT SUM (QuantityonHand) FROM FloralShop
